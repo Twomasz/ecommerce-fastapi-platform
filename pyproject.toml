@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ecommerce-project"
+version = "0.1.0"
+description = "Project for 'Python apps architecture' classes"
+authors = ["Twomasz <tomasz.wojcick@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+pydantic = {extras = ["email"], version = "^2.10.5"}
+dicttoxml = "^1.7.16"
+asyncio = "^3.4.3"
+sqlalchemy = "^2.0.37"
+python-dotenv = "^1.0.1"
+aiosqlite = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2"
+pytest-order = "^1.3.0"
+pytest-asyncio = "^0.25.2"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

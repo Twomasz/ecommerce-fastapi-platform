@@ -1,0 +1,73 @@
+# Test basic FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/products/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/orders/
+Accept: application/json
+
+###
+
+# Test the users/register_user endpoint
+POST http://127.0.0.1:8000/users/register/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Agata Nowak",
+  "email": "barbarkaa@example.com",
+  "phone_number": "123-456-7890"
+}
+
+###
+
+# Test the orders/place_order endpoint
+POST http://127.0.0.1:8000/orders/place_order/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "user_id": 1,
+  "items": [
+    {
+      "product_id": 1,
+      "quantity": 2
+    },
+    {
+      "product_id": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+###
+
+# test /products/fill
+POST http://127.0.0.1:8000/products/fill/
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name": "Laptop",
+    "description": "A new laptop",
+    "category": "Electronics",
+    "unit_price": 299.99,
+    "quantity": 15
+}
