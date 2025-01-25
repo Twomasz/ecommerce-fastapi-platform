@@ -56,6 +56,12 @@ To run the application, use the following command:
 ```bash
 poetry run uvicorn ecommerce_project.app:app --reload
 ```
+To enjoy non-empty database, you can use the following command to fill it with sample data:
+```bash
+poetry run python scripts/fill_sample_db.py
+```
+Once it's done, you can use some [`sample_api_calls.http`](scripts/sample_api_calls.http) 😊
+
 
 ## API Endpoints
 The application provides a set of API endpoints for managing users, products and orders.
